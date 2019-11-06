@@ -84,7 +84,7 @@
 // console.log(user);
 // console.log("After");
 
-//Async undefined solution with callback
+// Async undefined solution with callback
 
 // function getUser(id, callback)
 // {
@@ -186,6 +186,64 @@
 // let stud = new Student('Mukil', 22);
 // console.log(stud.tostring());
 
+//PROMISE EXAMPLE.....
 
-var x=read
+var promise1 =  new Promise(function(resolve, reject) {
+    const x = 10;
+    const y = 10;
+    if(x===y){
 
+
+        resolve();
+    }
+    else {
+        reject();
+    }
+});
+
+// promise1.
+//     then(function() {
+//         console.log("Equal");
+
+//     },
+//     function() {
+//         console.log("Not Equal");
+//     });
+
+// promise1.
+//     then(function() {
+//         console.log("Equal");
+
+//     }).
+//     catch(function() {
+//         console.log("Not Equal");
+//     });
+
+
+//Promise with async/awit
+
+async function f() {
+    let promises = new Promise((resolve, reject) => {
+        var x=4;
+        var y=3;
+        setTimeout(()=> {
+            if(x==y){   resolve("done");    }
+            else {  reject("Rejected")  }
+        }, 1000)
+        });
+        await promises.
+        then(function(msg)
+        { 
+              console.log(msg);   
+        }).
+        catch(function(err)  
+        {
+             console.log(err); 
+        }); 
+}
+
+f();
+
+        
+
+    
